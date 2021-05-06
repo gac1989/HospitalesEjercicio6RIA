@@ -1,0 +1,6 @@
+<h1>{{titulo}}</h1>
+<h2>Mi comida Favorita es: {{comidas[idxComidaFav]}}</h2>
+<br>
+<p *ngFor="let x of comidas">{{x}}</p>
+<br>
+<b><p *ngIf="comidas.length > 3">Hay mas de tres comidas en la lista!</p></b>

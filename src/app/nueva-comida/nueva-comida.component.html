@@ -1,0 +1,15 @@
+<h1>Crear Nueva Comida</h1>
+
+<form [formGroup]="comidaForm" (ngSubmit)="onSubmit()">
+    <label>
+        Id:
+        <input type="text" formControlName="id">
+    </label>
+    <label>
+        Nombre:
+        <input type="text" formControlName="nombre">
+    </label>
+
+    <input type="submit" value="Guardar">
+</form>
+<p class="error" *ngIf="!comidaForm.valid">Faltan completar datos.</p>

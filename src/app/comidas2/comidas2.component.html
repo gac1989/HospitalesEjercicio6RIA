@@ -1,0 +1,10 @@
+<h1>{{titulo}}</h1>
+<h2 *ngIf="comidas.length > 0">Mi comida Favorita es: {{comidas[idxComidaFav].nombre}}</h2>
+<br>
+<p *ngFor="let x of comidas">{{x.nombre}}</p>
+<br>
+<b><p *ngIf="comidas.length > 3">Hay mas de tres comidas en la lista!</p></b>
+
+<ul>
+    <app-comida *ngFor="let x of comidas" [model] = x></app-comida>
+</ul>
